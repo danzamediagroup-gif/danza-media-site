@@ -66,3 +66,16 @@
 @media(max-width:900px){.grid.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-layout{gap:28px}}
 @media(max-width:650px){.grid.service-grid{grid-template-columns:1fr 1fr;gap:9px}.service-photo-card{padding:10px}.service-photo{height:142px;margin:11px 0 13px}.card-copy{min-height:128px}.card-copy strong{font-size:12px}.card-copy small{font-size:10px}.visual-tag{left:18px;top:48px;font-size:7px}.contact{padding:66px 0}.contact-layout{grid-template-columns:1fr;gap:25px}.contact-side{gap:12px}.lead-form{padding:18px}.form-grid{gap:13px}.modal-shell{grid-template-columns:1fr}.modal-photo{min-height:245px;height:245px}.modal-copy{padding:30px 24px 26px}.modal-copy h3{font-size:27px}.service-modal{max-height:92vh;overflow:auto}}
 @media(max-width:390px){.grid.service-grid{grid-template-columns:1fr}.service-photo{height:190px}.card-copy{min-height:110px}}
+
+
+/* Per-service photo sources; the same photo is enlarged in the click-to-open detail view */
+.service-photo,.modal-photo{background-repeat:no-repeat;background-size:cover;background-position:center;background-color:#171411}
+.service-photo.tile-outdoor,.modal-photo.tile-outdoor{background-image:url('https://media.fooh.com/images/DOOH/screens/dsc10-tsx-broadway-corner-3d-billboard.jpg')}
+.service-photo.tile-tv,.modal-photo.tile-tv{background-image:url('https://www.utahbusiness.com/resizer/v2/DE56VDJNO5COFCSQ7NIRBYKW6U.jpeg?auth=b2c6312a3ec31cfe14893826c9ea13dcfbc84dbffe3d612a8d2717d9d4669153&focal=333%2C447&height=1200&width=1600')}
+.service-photo.tile-radio,.modal-photo.tile-radio{background-image:url('https://themediabox.co.za/assets/service-radio-BuG3TYUH.jpg')}
+.service-photo.tile-digital,.modal-photo.tile-digital{background-image:url('https://miraflow-cms.s3.us-west-2.amazonaws.com/brand-link-shorts-image.png')}
+.service-photo.tile-print,.modal-photo.tile-print{background-image:url('https://www.istitutomarangoni.com/marangoni/entities/gekomediagallery/Progetti_Fornasetti_0009_Project_Fornasetti_Catherine_Ortiz_2.jpg')}
+.service-photo.tile-transit,.modal-photo.tile-transit{background-image:url('https://www.bigmedia.sk/uploads/tx_product/celoploska_stabilita_bus.jpg')}
+.service-photo.tile-indoor,.modal-photo.tile-indoor{background-image:url('https://altop.com/wp-content/uploads/2025/05/Retail.jpg')}
+.service-photo.tile-elevator,.modal-photo.tile-elevator{background-image:url('https://datamysite.com/public/storage/blogs/533031125113800.jpg')}
+.service-photo.tile-special,.modal-photo.tile-special{background-image:url('https://cs9.pikabu.ru/post_img/big/2019/12/27/0/1577396041170941159.jpg')}
