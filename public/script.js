@@ -114,45 +114,26 @@ modalClose.addEventListener("click",()=>modal.close());
 modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 document.getElementById("modalAction").addEventListener("click",()=>modal.close());
 
-/* Email enquiry form — FormSubmit activates the inbox after its first confirmation email */
+
+/* Standard HTML POST to FormSubmit — no AJAX or CORS dependency */
 const leadForm=document.getElementById("leadForm");
 const formStatus=document.getElementById("formStatus");
-const submitButton=leadForm.querySelector('button[type="submit"]');
-leadForm.addEventListener("submit",async event=>{
- event.preventDefault();
- if(!leadForm.reportValidity())return;
- const dict=copy[lang.value]||copy.ru;
- formStatus.className="form-status";
- formStatus.textContent=dict.formSending;
- submitButton.disabled=true;
- const payload=Object.fromEntries(new FormData(leadForm).entries());
- payload._url=window.location.href;
- if(payload.email)payload._replyto=payload.email;
- try{
-  const response=await fetch("https://formsubmit.co/ajax/danza.mediagroup@gmail.com",{
-   method:"POST",
-   headers:{"Content-Type":"application/json","Accept":"application/json"},
-   body:JSON.stringify(payload)
-  });
-  const result=await response.json();
-  const ok=result?.success===true||result?.success==="true";
-  if(ok){
-   formStatus.textContent=dict.formSuccess;
-   formStatus.className="form-status success";
-   leadForm.reset();
-  }else{
-   const message=String(result?.message||"").toLowerCase();
-   if(message.includes("activation")||message.includes("confirm")||message.includes("activate")){
-    formStatus.textContent=dict.formActivation;
-   }else{
-    formStatus.textContent=dict.formError;
-    formStatus.className="form-status error";
-   }
+const replyToField=document.getElementById("formReplyTo");
+leadForm.addEventListener("submit",event=>{
+  if(!leadForm.reportValidity()){
+    event.preventDefault();
+    return;
   }
- }catch(error){
-  formStatus.textContent=dict.formError;
-  formStatus.className="form-status error";
- }finally{
-  submitButton.disabled=false;
- }
+  const email=leadForm.querySelector('input[name="email"]')?.value?.trim()||"";
+  replyToField.value=email;
+  const dict=copy[lang.value]||copy.ru;
+  formStatus.className="form-status";
+  formStatus.textContent=dict.formSending||"Отправляем заявку…";
+  // Native POST continues to FormSubmit; its response shows activation/delivery status.
 });
+const submittedParams=new URLSearchParams(window.location.search);
+if(submittedParams.get("request")==="sent"){
+  const dict=copy[lang.value]||copy.ru;
+  formStatus.textContent=dict.formSuccess||"Заявка отправлена. Спасибо!";
+  formStatus.className="form-status success";
+}
