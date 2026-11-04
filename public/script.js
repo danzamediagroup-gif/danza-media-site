@@ -115,7 +115,7 @@ modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 document.getElementById("modalAction").addEventListener("click",()=>modal.close());
 
 
-/* Standard HTML POST to FormSubmit — no AJAX or CORS dependency */
+/* Standard HTML POST to the DANZA MEDIA Google Apps Script web app. */
 const leadForm=document.getElementById("leadForm");
 const formStatus=document.getElementById("formStatus");
 const replyToField=document.getElementById("formReplyTo");
@@ -129,7 +129,7 @@ leadForm.addEventListener("submit",event=>{
   const dict=copy[lang.value]||copy.ru;
   formStatus.className="form-status";
   formStatus.textContent=dict.formSending||"Отправляем заявку…";
-  // Native POST continues to FormSubmit; its response shows activation/delivery status.
+  // Native POST continues to Google Apps Script; it validates the request and sends the email.
 });
 const submittedParams=new URLSearchParams(window.location.search);
 if(submittedParams.get("request")==="sent"){
