@@ -24,3 +24,135 @@ document.getElementById("year").textContent=new Date().getFullYear();
 const menu=document.getElementById("menu"),nav=document.getElementById("navlinks");
 menu.addEventListener("click",()=>nav.classList.toggle("open"));
 nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+
+
+Object.assign(copy.ru,{
+svcOutdoor:"Наружная реклама",descOutdoor:"Билборды, LED-экраны, остановки и городские рекламные конструкции.",
+svcTv:"Телевидение",descTv:"Рекламные ролики, спонсорство программ и телевизионные интеграции.",
+svcRadio:"Радио",descRadio:"Аудиоролики, спонсорство эфира и нативные интеграции.",
+svcDigital:"Digital и интернет",descDigital:"Онлайн-размещение, социальные сети и рекламные интеграции.",
+svcPrint:"Печатные медиа",descPrint:"Газеты, журналы, каталоги и другая печатная продукция.",
+svcTransit:"Транспорт и брендинг",descTransit:"Брендирование автобусов, поездов и транспортной инфраструктуры.",
+svcIndoor:"Indoor и премиальные площадки",descIndoor:"Торговые и бизнес-центры, фитнес-клубы и внутренние рекламные поверхности.",
+svcElevator:"Экраны в лифтах премиальных ЖК",descElevator:"Вертикальные digital-экраны внутри лифтов. Рекламные ролики 10, 15 или 20 секунд.",
+svcSpecial:"Специальные форматы",descSpecial:"Кинотеатры, события, спонсорские и нестандартные проекты.",
+svcOther:"Комплексная рекламная кампания",cardExplore:"Смотреть пример ↗",visualExample:"Визуальный пример",
+visualDisclaimer:"Изображения — визуализация рекламных форматов, а не фотографии реализованных кампаний.",
+modalKicker:"ФОРМАТ РАЗМЕЩЕНИЯ",modalDisclaimer:"Иллюстрация показывает пример рекламной среды. Конкретные площадки и условия уточняются под задачу.",modalCta:"Обсудить размещение ↗",
+formName:"Ваше имя *",formCompany:"Компания",formPhone:"Телефон *",formEmail:"Email",formService:"Интересующее направление *",formChoose:"Выберите направление",formMessage:"Кратко о задаче *",formMessagePlaceholder:"Что хотите рекламировать, где и когда?",formConsent:"Согласен(на), чтобы DANZA MEDIA связалась со мной по поводу этой заявки. *",formSubmit:"Отправить заявку ↗",formPrivacy:"Контактные данные используются только для ответа на ваш запрос.",
+contactDirect:"ИЛИ СВЯЖИТЕСЬ С НАМИ НАПРЯМУЮ",contactSideNote:"Ответим и поможем подобрать площадки под вашу задачу.",
+formSending:"Отправляем заявку…",formSuccess:"Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.",formActivation:"Форма ожидает подтверждения адреса владельца. Проверьте письмо от FormSubmit на danza.mediagroup@gmail.com и подтвердите подключение.",formError:"Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram."
+});
+Object.assign(copy.uz,{
+svcOutdoor:"Tashqi reklama",descOutdoor:"Bilbordlar, LED ekranlar, bekatlar va shahar reklama konstruksiyalari.",
+svcTv:"Televideniye",descTv:"Reklama roliklari, dasturlar homiyligi va televizion integratsiyalar.",
+svcRadio:"Radio",descRadio:"Audio roliklar, efir homiyligi va tabiiy integratsiyalar.",
+svcDigital:"Digital va internet",descDigital:"Onlayn joylashtirish, ijtimoiy tarmoqlar va reklama integratsiyalari.",
+svcPrint:"Bosma media",descPrint:"Gazetalar, jurnallar, kataloglar va boshqa bosma mahsulotlar.",
+svcTransit:"Transport va brending",descTransit:"Avtobuslar, poyezdlar va transport infratuzilmasini brendlash.",
+svcIndoor:"Indoor va premium maydonlar",descIndoor:"Savdo va biznes markazlari, fitnes klublari va ichki reklama yuzalari.",
+svcElevator:"Premium turar joy majmualari liftlaridagi ekranlar",descElevator:"Lift kabinalari ichidagi vertikal digital ekranlar. 10, 15 yoki 20 soniyali reklama roliklari.",
+svcSpecial:"Maxsus formatlar",descSpecial:"Kinoteatrlar, tadbirlar, homiylik va noodatiy loyihalar.",
+svcOther:"Kompleks reklama kampaniyasi",cardExplore:"Misolni ko‘rish ↗",visualExample:"Vizual misol",
+visualDisclaimer:"Tasvirlar reklama formatlarining vizual namunasi bo‘lib, amalga oshirilgan kampaniyalar fotosuratlari emas.",
+modalKicker:"REKLAMA JOYLASHTIRISH FORMATI",modalDisclaimer:"Tasvir reklama muhiti namunasini ko‘rsatadi. Aniq maydonlar va shartlar vazifaga qarab belgilanadi.",modalCta:"Joylashtirishni muhokama qilish ↗",
+formName:"Ismingiz *",formCompany:"Kompaniya",formPhone:"Telefon *",formEmail:"Email",formService:"Qiziqtirgan yo‘nalish *",formChoose:"Yo‘nalishni tanlang",formMessage:"Vazifa haqida qisqacha *",formMessagePlaceholder:"Nimani, qayerda va qachon reklama qilmoqchisiz?",formConsent:"DANZA MEDIA ushbu so‘rov bo‘yicha men bilan bog‘lanishiga roziman. *",formSubmit:"So‘rov yuborish ↗",formPrivacy:"Aloqa ma’lumotlari faqat so‘rovingizga javob berish uchun ishlatiladi.",
+contactDirect:"YOKI BIZ BILAN BEVOSITA BOG‘LANING",contactSideNote:"Javob beramiz va vazifangizga mos maydonlarni tanlashga yordam beramiz.",
+formSending:"So‘rov yuborilmoqda…",formSuccess:"Rahmat! So‘rovingiz yuborildi. Tez orada siz bilan bog‘lanamiz.",formActivation:"Forma egasining email tasdig‘ini kutmoqda. danza.mediagroup@gmail.com manziliga FormSubmit yuborgan xatni tekshiring va ulanishni tasdiqlang.",formError:"So‘rov yuborilmadi. Qayta urinib ko‘ring yoki Telegram orqali yozing."
+});
+Object.assign(copy.en,{
+svcOutdoor:"Outdoor advertising",descOutdoor:"Billboards, LED screens, bus stops and urban advertising structures.",
+svcTv:"Television",descTv:"TV commercials, programme sponsorships and integrations.",
+svcRadio:"Radio",descRadio:"Audio spots, airtime sponsorships and native integrations.",
+svcDigital:"Digital & internet",descDigital:"Online placements, social media and advertising integrations.",
+svcPrint:"Print media",descPrint:"Newspapers, magazines, catalogues and other print formats.",
+svcTransit:"Transit & branding",descTransit:"Branding for buses, trains and transport infrastructure.",
+svcIndoor:"Indoor & premium venues",descIndoor:"Shopping and business centres, fitness clubs and indoor media surfaces.",
+svcElevator:"Screens inside premium residential elevators",descElevator:"Vertical digital displays inside elevator cabins. 10-, 15- or 20-second advertising spots.",
+svcSpecial:"Special formats",descSpecial:"Cinema, events, sponsorships and non-standard projects.",
+svcOther:"Integrated advertising campaign",cardExplore:"View example ↗",visualExample:"Format visualisation",
+visualDisclaimer:"Images are visual examples of advertising formats, not photographs of completed client campaigns.",
+modalKicker:"ADVERTISING FORMAT",modalDisclaimer:"This image illustrates a type of advertising environment. Specific venues and terms are selected for each brief.",modalCta:"Discuss a placement ↗",
+formName:"Your name *",formCompany:"Company",formPhone:"Phone *",formEmail:"Email",formService:"Area of interest *",formChoose:"Choose a service",formMessage:"Tell us briefly about your brief *",formMessagePlaceholder:"What would you like to promote, where and when?",formConsent:"I agree that DANZA MEDIA may contact me about this enquiry. *",formSubmit:"Send enquiry ↗",formPrivacy:"Your contact details are used only to respond to your enquiry.",
+contactDirect:"OR CONTACT US DIRECTLY",contactSideNote:"We’ll get back to you and help select media options for your brief.",
+formSending:"Sending your enquiry…",formSuccess:"Thank you! Your enquiry has been sent. We’ll be in touch soon.",formActivation:"The form is waiting for the owner’s email confirmation. Check the message from FormSubmit at danza.mediagroup@gmail.com and confirm the connection.",formError:"We couldn’t send your enquiry. Please try again or message us on Telegram."
+});
+const oldSetLanguage=setLanguage;
+setLanguage=function(language){
+ oldSetLanguage(language);
+ const dict=copy[language]||copy.ru;
+ document.querySelectorAll("[data-i-placeholder]").forEach(el=>{const key=el.dataset.iPlaceholder;if(dict[key])el.setAttribute("placeholder",dict[key])});
+};
+setLanguage(lang.value);
+
+/* Click-to-open service photography */
+const modal=document.getElementById("serviceModal");
+const modalPhoto=document.getElementById("modalPhoto");
+const modalTitle=document.getElementById("modalTitle");
+const modalText=document.getElementById("modalText");
+const modalClose=document.getElementById("modalClose");
+const serviceSelect=document.getElementById("serviceSelect");
+const serviceOptions={
+outdoor:"Наружная реклама",tv:"Телевидение",radio:"Радио",digital:"Digital и интернет",print:"Печатные медиа",
+transit:"Транспорт и брендинг",indoor:"Indoor и премиальные площадки",elevator:"Экраны в лифтах премиальных ЖК",special:"Специальные форматы"
+};
+document.querySelectorAll(".service-photo-card").forEach(card=>{
+ card.addEventListener("click",()=>{
+  const key=card.dataset.service;
+  const title=card.querySelector(".card-copy strong")?.textContent||"";
+  const description=card.querySelector(".card-copy small")?.textContent||"";
+  modalTitle.textContent=title;
+  modalText.textContent=description;
+  modalPhoto.className="modal-photo tile-"+key;
+  modalPhoto.setAttribute("aria-label",title+" — "+(copy[lang.value]?.visualExample||copy.ru.visualExample));
+  const wanted=serviceOptions[key];
+  if(wanted&&serviceSelect){const option=[...serviceSelect.options].find(o=>o.value===wanted);if(option)serviceSelect.value=option.value;}
+  if(typeof modal.showModal==="function")modal.showModal();else modal.setAttribute("open","");
+ });
+});
+modalClose.addEventListener("click",()=>modal.close());
+modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
+document.getElementById("modalAction").addEventListener("click",()=>modal.close());
+
+/* Email enquiry form — FormSubmit activates the inbox after its first confirmation email */
+const leadForm=document.getElementById("leadForm");
+const formStatus=document.getElementById("formStatus");
+const submitButton=leadForm.querySelector('button[type="submit"]');
+leadForm.addEventListener("submit",async event=>{
+ event.preventDefault();
+ if(!leadForm.reportValidity())return;
+ const dict=copy[lang.value]||copy.ru;
+ formStatus.className="form-status";
+ formStatus.textContent=dict.formSending;
+ submitButton.disabled=true;
+ const payload=Object.fromEntries(new FormData(leadForm).entries());
+ payload._url=window.location.href;
+ if(payload.email)payload._replyto=payload.email;
+ try{
+  const response=await fetch("https://formsubmit.co/ajax/danza.mediagroup@gmail.com",{
+   method:"POST",
+   headers:{"Content-Type":"application/json","Accept":"application/json"},
+   body:JSON.stringify(payload)
+  });
+  const result=await response.json();
+  const ok=result?.success===true||result?.success==="true";
+  if(ok){
+   formStatus.textContent=dict.formSuccess;
+   formStatus.className="form-status success";
+   leadForm.reset();
+  }else{
+   const message=String(result?.message||"").toLowerCase();
+   if(message.includes("activation")||message.includes("confirm")||message.includes("activate")){
+    formStatus.textContent=dict.formActivation;
+   }else{
+    formStatus.textContent=dict.formError;
+    formStatus.className="form-status error";
+   }
+  }
+ }catch(error){
+  formStatus.textContent=dict.formError;
+  formStatus.className="form-status error";
+ }finally{
+  submitButton.disabled=false;
+ }
+});
